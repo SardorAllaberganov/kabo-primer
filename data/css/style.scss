@@ -1,0 +1,223 @@
+$mainColor: #278ce1;
+$secondaryColor: #e1f1ff;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input,
+textarea {
+    outline: none !important;
+    resize: none;
+}
+
+%transition_style{
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+// Navigation styles
+.navigation {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    padding: 25px 90px;
+    z-index: 10;
+    &_logo {
+        img {
+            max-width: 200px;
+        }
+    }
+    &_list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &_items {
+        margin: 0 10px;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            width: 0;
+            border-bottom: 1px solid $mainColor;
+            content: "";
+            bottom: 0;
+            position: absolute;
+            @extend %transition_style;
+        }
+        &:hover::before {
+            width: 100%;
+        }
+        a {
+            color: #fff;
+        }
+        &:hover .navigation_dropdown{
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    }
+    &_dropdown {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 20px;
+        padding-top: 15px;
+        left: 50%;
+        transform: translate(-50%, 20px);
+        width: 250px;
+        @extend %transition_style;
+        ul{
+            background: #1c1c1c;
+            padding: 25px;
+        }
+        li{
+            margin-bottom: 20px;
+            font-size: .9em;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            a{
+                color: #999;
+                @extend %transition_style;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// Header promo styles
+
+.header_promo {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    &_background {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 1;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &_video {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 2;
+        video {
+            width: 100%;
+        }
+    }
+    &_title {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        color: #fff;
+        text-align: center;
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            span {
+                color: $mainColor;
+            }
+        }
+        p {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+// video overlay style
+.video_overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: 0.4);
+    z-index: 3;
+}
+
+// button styles
+.active-btn {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 30px;
+    vertical-align: top;
+    color: #fff;
+    font: 12px "Montserrat", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 50px;
+    letter-spacing: 0.8px;
+    border: 1px solid $mainColor;
+    background: $mainColor;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    @extend %transition_style;
+
+    &::before {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+        content: "";
+        @extend %transition_style;
+    }
+    &:hover {
+        color: $mainColor !important;
+        border: 1px solid #fff;
+    }
+    &:hover::before {
+        width: 100%;
+    }
+    span {
+        position: relative;
+        display: block;
+        z-index: 5;
+    }
+}
