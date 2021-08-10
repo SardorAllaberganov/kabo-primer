@@ -162,10 +162,8 @@ textarea {
   position: relative;
   border: none;
   font-size: 1.8em;
+  display: none;
   background: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -181,10 +179,11 @@ textarea {
   width: 30px;
   height: 1px;
   background: #fff;
-  margin: 7px 0;
+  margin: 3px 0;
 }
 
 .mobile_menu {
+  display: none;
   width: 300px;
   position: fixed;
   right: 0;
@@ -1320,7 +1319,9 @@ textarea {
     display: none;
   }
   .menu_btn {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */

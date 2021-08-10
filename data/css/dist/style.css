@@ -131,8 +131,8 @@ textarea {
   position: relative;
   border: none;
   font-size: 1.8em;
+  display: none;
   background: none;
-  display: flex;
   flex-direction: column;
   align-items: center;
   outline: none;
@@ -142,10 +142,11 @@ textarea {
   width: 30px;
   height: 1px;
   background: #fff;
-  margin: 7px 0;
+  margin: 3px 0;
 }
 
 .mobile_menu {
+  display: none;
   width: 300px;
   position: fixed;
   right: 0;
@@ -1140,6 +1141,6 @@ textarea {
   }
 
   .menu_btn {
-    display: block;
+    display: flex;
   }
 }
