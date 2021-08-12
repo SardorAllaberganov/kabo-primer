@@ -182,7 +182,7 @@ textarea {
     width: 300px;
     position: fixed;
     top: 0;
-    overflow-y: scroll;
+    overflow: auto;
     background: $bgColor;
     height: 100%;
     z-index: 9999;
