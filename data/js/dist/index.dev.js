@@ -30,10 +30,10 @@ $(document).ready(function () {
   $(".menu_btn").click(function () {
     if ($('.mobile_menu').hasClass('openMenu')) {
       $('.mobile_menu').removeClass("openMenu");
-      $('.menu_btn').removeClass("show");
+      $('.menu_btn').removeClass("showOverlay");
     } else {
       $('.mobile_menu').addClass("openMenu");
-      $('.menu_btn').addClass("show");
+      $('.menu_btn').addClass("showOverlay");
     }
   }); // sliders
 

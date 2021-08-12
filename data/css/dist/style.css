@@ -30,7 +30,7 @@ textarea {
   resize: none;
 }
 
-.social_icons li, .footer_links a, .news_image img, .services_block_in a h4, .services_block_in a::before, .services_block_in a, .active-btn::before, .active-btn, .mobile_menu, .show, .navigation .lang_link span, .navigation_dropdown li a, .navigation_dropdown, .navigation_items::before, .navigation {
+.social_icons li, .footer_links a, .news_image img, .services_block_in a h4, .services_block_in a::before, .services_block_in a, .active-btn::before, .active-btn, .mobile_menu, .showOverlay, .navigation .lang_link span, .navigation_dropdown li a, .navigation_dropdown, .navigation_items::before, .navigation {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -151,7 +151,7 @@ textarea {
   right: 0 !important;
 }
 
-.show::before {
+.showOverlay::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -159,6 +159,7 @@ textarea {
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   content: "";
+  z-index: 999;
 }
 
 .mobile_menu {

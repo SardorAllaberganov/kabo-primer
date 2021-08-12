@@ -162,7 +162,7 @@ textarea {
     right: 0 !important;
     // visibility: visible!important;
 }
-.show {
+.showOverlay {
     @extend %transition_style;
     &::before {
         position: absolute;
@@ -172,6 +172,7 @@ textarea {
         height: 100vh;
         background: rgba($color: #000000, $alpha: 0.5);
         content: "";
+        z-index: 999;
     }
 }
 
