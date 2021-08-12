@@ -30,8 +30,10 @@ $(document).ready(function () {
   $(".menu_btn").click(function () {
     if ($('.mobile_menu').hasClass('openMenu')) {
       $('.mobile_menu').removeClass("openMenu");
+      $('.menu_btn').removeClass("show");
     } else {
       $('.mobile_menu').addClass("openMenu");
+      $('.menu_btn').addClass("show");
     }
   }); // sliders
 
