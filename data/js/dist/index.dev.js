@@ -39,10 +39,10 @@ $(document).ready(function () {
 
   var progressbar = $(".mry-slider-progress-bar");
   var swiper = new Swiper(".mry-main-slider", {
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
     loop: true,
     parallax: true,
     //mousewheel: true,
