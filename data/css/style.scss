@@ -31,6 +31,9 @@ textarea {
     outline: none !important;
     resize: none;
 }
+p {
+    line-height: 150%;
+}
 
 %transition_style {
     -webkit-transition: all 0.3s linear;
@@ -387,7 +390,8 @@ textarea {
 // main page about section
 #about_section,
 .mission,
-.projects {
+.projects,
+.portfolio_page {
     position: relative;
     overflow: hidden;
     background: $bgColor;
@@ -1552,7 +1556,6 @@ textarea {
             opacity: 0;
             content: "";
         }
-        
     }
     &_caption {
         display: block;
@@ -1563,12 +1566,195 @@ textarea {
         bottom: -5%;
         background: #3e3e3e;
         z-index: 10;
-        h5{
+        h5 {
             margin: 0;
             color: #fff;
             font-weight: bold;
             text-transform: uppercase;
         }
+    }
+}
+
+.portfolio_page {
+    .portfolio {
+        &_text_left {
+            position: relative;
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 50px 0 0;
+            .text_right {
+                padding: 0;
+            }
+            .text_left {
+                padding: 50px 0 0 50px;
+            }
+        }
+        &_list {
+            position: relative;
+            z-index: 99;
+            a {
+                color: #fff;
+            }
+            p {
+                color: #adadad;
+            }
+            h2 {
+                margin: 20px 0;
+                font-weight: bold;
+            }
+            .left_col {
+                width: 40%;
+                padding-top: 40px;
+                &::before {
+                    content: none;
+                    display: none;
+                }
+            }
+            .right_col {
+                width: 60%;
+            }
+        }
+
+        
+        &_type_text {
+            color: $mainColor;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+        &_img {
+            padding-left: 100px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .more {
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-top: 30px;
+        vertical-align: middle;
+    }
+    .play_icon {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        background: $mainColor;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: middle;
+        position: relative;
+        &::before {
+            position: absolute;
+            border: 8px solid transparent;
+            border-left: 12px solid #fff;
+            content: "";
+            left: 15px;
+            top: 10px;
+        }
+    }
+    %triangle {
+        position: relative;
+        &::before {
+            position: absolute;
+            background: url(../img/Polygon.png);
+            content: "";
+            width: 200px;
+            height: 200px;
+            background-size: contain;
+            top: 0;
+        }
+    }
+
+    .triangle_after {
+        @extend %triangle;
+        &::before {
+            right: 0;
+        }
+    }
+
+    .triangle_before {
+        @extend %triangle;
+        &::before {
+            left: 0;
+            transform: rotate(-90deg);
+        }
+    }
+
+    .pl-50 {
+        padding: 0 50px;
+    }
+
+    %lines {
+        position: relative;
+        &::before {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            content: "";
+            background: $mainColor;
+        }
+        &::after {
+            position: absolute;
+            width: 250px;
+            height: 1px;
+            content: "";
+            background: $mainColor;
+        }
+    }
+    .lines_before {
+        @extend %lines;
+        &::before {
+            left: 75px;
+            top: 0;
+        }
+        &::after {
+            left: 25px;
+            top: 51px;
+        }
+    }
+    .lines_after {
+        @extend %lines;
+        &::before {
+            right: 25px;
+            top: 0;
+        }
+        &::after {
+            right: -25px;
+            top: 51px;
+        }
+    }
+}
+.pagi {
+    display: flex;
+    align-items: center;
+    &::after{
+        display: inline-block;
+        width: 50px;
+        height: 1px;
+        vertical-align: top;
+        background: #e54b4b;
+        content: "";
+    }
+
+    li {
+        margin-right: 20px;
+        a {
+            color: #adadad!important;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            list-style-type: none;
+        }
+    }
+    .active{
+        a{
+            color: inherit!important;
+        }
+        color: #fff!important;
     }
 }
 
@@ -1686,22 +1872,22 @@ textarea {
 }
 
 @media only screen and (max-width: 768px) {
-    .projects_list{
+    .projects_list {
         margin: 0 -15px;
     }
-    .projects_item{
-        a{
+    .projects_item {
+        a {
             padding: 10px;
-            &::before{
+            &::before {
                 border-width: 100px;
             }
         }
         width: 100%;
     }
-    .projects_caption{
+    .projects_caption {
         padding: 20px;
-        h5{
-            font-size: .9em;
+        h5 {
+            font-size: 0.9em;
         }
     }
     .header_promo_title {
@@ -1826,6 +2012,33 @@ textarea {
                 content: none;
             }
         }
+    }
+
+    .portfolio_page .triangle_after::before, 
+    .portfolio_page .triangle_before::before{
+        content: none;
+    }
+    .portfolio_page .lines_before, 
+    .portfolio_page .lines_after{
+        &::after, &::before{
+            content: none;
+        }
+    }
+    .portfolio_page .portfolio_img,
+    .portfolio_page .portfolio_text_left .text_right,
+    .portfolio_page .portfolio_text_left,
+    .portfolio_page .portfolio_list .left_col{
+        padding: 0;
+    }
+
+    .portfolio_page .portfolio_list .right_col,
+    .portfolio_page .portfolio_list .left_col{
+        text-align: left;
+        width: 100%;
+    }
+    .portfolio_page .portfolio_list .left_col{
+        order: 2;
+        margin-top: 20px;
     }
 }
 
