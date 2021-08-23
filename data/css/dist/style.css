@@ -34,7 +34,7 @@ p {
   line-height: 150%;
 }
 
-.projects_img::before, .projects_img img, .projects_img, .social_icons li, .footer_links a, .news_image img, .services_block_in a h4, .services_block_in a::before, .services_block_in a, .active-btn::before, .active-btn, .mobile_menu, .showOverlay, .navigation .lang_link span, .navigation_dropdown li a, .navigation_dropdown, .navigation_items::before, .navigation {
+.work_navi a, .projects_img::before, .projects_img img, .projects_img, .social_icons li, .footer_links a, .news_image img, .services_block_in a h4, .services_block_in a::before, .services_block_in a, .active-btn::before, .active-btn, .mobile_menu, .showOverlay, .navigation .lang_link span, .navigation_dropdown li a, .navigation_dropdown, .navigation_items::before, .navigation {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -1654,6 +1654,29 @@ p {
   color: inherit !important;
 }
 
+.work_navi {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+}
+.work_navi a {
+  position: relative;
+  color: #fff;
+}
+.work_navi a:hover {
+  color: #adadad;
+}
+.work_navi a::after {
+  height: 1px;
+  background: #278ce1;
+  content: "";
+  width: 100%;
+  bottom: -5px;
+  position: absolute;
+  left: 0;
+}
+
 @media only screen and (max-width: 1200px) {
   .navigation {
     padding: 20px 15px;
@@ -1958,6 +1981,10 @@ p {
   }
 }
 @media only screen and (max-width: 576px) {
+  .work_navi a {
+    font-size: 11px;
+  }
+
   .services_block_in {
     display: flex;
     flex-direction: column;

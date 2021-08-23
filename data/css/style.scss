@@ -1758,6 +1758,30 @@ p {
     }
 }
 
+.work_navi{
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    a{
+        position: relative;
+        color: #fff;
+        @extend %transition_style;
+        &:hover{
+            color: #adadad;
+        }
+        &::after{
+            height: 1px;
+            background: $mainColor;
+            content: "";
+            width: 100%;
+            bottom: -5px;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .navigation {
         padding: 20px 15px;
@@ -2042,7 +2066,11 @@ p {
     }
 }
 
+
 @media only screen and (max-width: 576px) {
+    .work_navi a{
+        font-size: 11px;
+    }
     .services_block_in {
         display: flex;
         flex-direction: column;
