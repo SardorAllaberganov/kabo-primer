@@ -347,6 +347,7 @@ p {
     position: relative;
     display: inline-block;
     margin: 0;
+    width: max-content;
     padding: 0 30px;
     vertical-align: top;
     color: #fff;
@@ -1107,8 +1108,13 @@ p {
     &_item {
         z-index: 9;
         position: relative;
+        display: flex;
+        height: 100%;
         width: 100%;
         overflow: hidden;
+        flex-direction: column;
+        align-content: space-between;
+        justify-content: space-between;
         a {
             display: flex;
             flex-direction: column;
@@ -1616,7 +1622,6 @@ p {
             }
         }
 
-        
         &_type_text {
             color: $mainColor;
             font-weight: bold;
@@ -1729,20 +1734,23 @@ p {
 }
 .pagi {
     display: flex;
+    position: relative;
+    z-index: 99;
+    margin-top: 20px;
     align-items: center;
-    &::after{
+    &::after {
         display: inline-block;
         width: 50px;
         height: 1px;
         vertical-align: top;
-        background: #e54b4b;
+        background: $mainColor;
         content: "";
     }
 
     li {
         margin-right: 20px;
         a {
-            color: #adadad!important;
+            color: #adadad !important;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -1750,27 +1758,27 @@ p {
             list-style-type: none;
         }
     }
-    .active{
-        a{
-            color: inherit!important;
+    .active {
+        a {
+            color: inherit !important;
         }
-        color: #fff!important;
+        color: #fff !important;
     }
 }
 
-.work_navi{
+.work_navi {
     position: relative;
     z-index: 99;
     display: flex;
     justify-content: space-between;
-    a{
+    a {
         position: relative;
         color: #fff;
         @extend %transition_style;
-        &:hover{
+        &:hover {
             color: #adadad;
         }
-        &::after{
+        &::after {
             height: 1px;
             background: $mainColor;
             content: "";
@@ -2038,37 +2046,40 @@ p {
         }
     }
 
-    .portfolio_page .triangle_after::before, 
-    .portfolio_page .triangle_before::before{
+    .portfolio_page .triangle_after::before,
+    .portfolio_page .triangle_before::before {
         content: none;
     }
-    .portfolio_page .lines_before, 
-    .portfolio_page .lines_after{
-        &::after, &::before{
+    .portfolio_page .lines_before,
+    .portfolio_page .lines_after {
+        &::after,
+        &::before {
             content: none;
         }
     }
     .portfolio_page .portfolio_img,
     .portfolio_page .portfolio_text_left .text_right,
     .portfolio_page .portfolio_text_left,
-    .portfolio_page .portfolio_list .left_col{
+    .portfolio_page .portfolio_list .left_col {
         padding: 0;
     }
 
     .portfolio_page .portfolio_list .right_col,
-    .portfolio_page .portfolio_list .left_col{
+    .portfolio_page .portfolio_list .left_col {
         text-align: left;
         width: 100%;
     }
-    .portfolio_page .portfolio_list .left_col{
+    .portfolio_page .portfolio_list .left_col {
         order: 2;
         margin-top: 20px;
     }
 }
 
-
 @media only screen and (max-width: 576px) {
-    .work_navi a{
+    .news_item .active-btn{
+        margin-bottom: 30px;
+    }
+    .work_navi a {
         font-size: 11px;
     }
     .services_block_in {

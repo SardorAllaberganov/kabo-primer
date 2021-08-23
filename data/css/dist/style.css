@@ -329,6 +329,7 @@ p {
   position: relative;
   display: inline-block;
   margin: 0;
+  width: max-content;
   padding: 0 30px;
   vertical-align: top;
   color: #fff;
@@ -1059,8 +1060,13 @@ p {
 .news_item {
   z-index: 9;
   position: relative;
+  display: flex;
+  height: 100%;
   width: 100%;
   overflow: hidden;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
 }
 .news_item a {
   display: flex;
@@ -1626,6 +1632,9 @@ p {
 
 .pagi {
   display: flex;
+  position: relative;
+  z-index: 99;
+  margin-top: 20px;
   align-items: center;
 }
 .pagi::after {
@@ -1633,7 +1642,7 @@ p {
   width: 50px;
   height: 1px;
   vertical-align: top;
-  background: #e54b4b;
+  background: #278ce1;
   content: "";
 }
 .pagi li {
@@ -1981,6 +1990,10 @@ p {
   }
 }
 @media only screen and (max-width: 576px) {
+  .news_item .active-btn {
+    margin-bottom: 30px;
+  }
+
   .work_navi a {
     font-size: 11px;
   }
