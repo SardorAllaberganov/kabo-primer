@@ -692,7 +692,7 @@ p {
   border-left: 1px solid #343434;
   border-right: 1px solid #343434;
   content: "";
-  z-index: 2;
+  z-index: -1;
 }
 
 .section_content::after {
@@ -705,7 +705,7 @@ p {
   border-left: 1px solid #343434;
   border-right: 1px solid #343434;
   content: "";
-  z-index: 2;
+  z-index: -1;
 }
 
 .advantage_section,

@@ -605,7 +605,7 @@ p {
         border-left: 1px solid #343434;
         border-right: 1px solid #343434;
         content: "";
-        z-index: 2;
+        z-index: -1;
     }
     &::after {
         position: absolute;
@@ -617,7 +617,7 @@ p {
         border-left: 1px solid #343434;
         border-right: 1px solid #343434;
         content: "";
-        z-index: 2;
+        z-index: -1;
     }
 }
 
