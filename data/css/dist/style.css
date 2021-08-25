@@ -1090,6 +1090,28 @@ p {
   color: #fff;
   margin-top: 20px;
 }
+.news_individual {
+  color: #fff;
+}
+.news_individual img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+.news_individual h2 {
+  font-weight: bold;
+  margin: 30px 0;
+}
+.news_date {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.news_date span {
+  color: #278ce1;
+  text-transform: uppercase;
+}
 
 .wrapper {
   position: relative;
