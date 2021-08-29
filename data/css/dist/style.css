@@ -2046,6 +2046,22 @@ p {
   }
 }
 @media only screen and (max-width: 768px) {
+  .project_triangle_before::before, .project_triangle_after::after {
+    content: none;
+  }
+
+  .project_individual .project_item {
+    flex-wrap: wrap;
+  }
+  .project_individual .project_item .divisions_item_right {
+    order: 2;
+    text-align: left;
+  }
+  .project_individual .project_img {
+    width: 100%;
+    order: 1;
+  }
+
   .projects_list {
     margin: 0 -15px;
   }

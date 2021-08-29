@@ -2394,6 +2394,25 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  .project_triangle_before::before, .project_triangle_after::after {
+    content: none;
+  }
+  .project_individual .project_item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .project_individual .project_item .divisions_item_right {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: left;
+  }
+  .project_individual .project_img {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
   .projects_list {
     margin: 0 -15px;
   }
