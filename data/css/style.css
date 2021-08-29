@@ -454,7 +454,8 @@ p {
 #about_section,
 .mission,
 .projects,
-.portfolio_page {
+.portfolio_page,
+.contacts {
   position: relative;
   overflow: hidden;
   background: #2f2f2f;
@@ -1298,7 +1299,7 @@ p {
 .news_date {
   color: #fff;
   font-weight: 500;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .news_date span {
@@ -2036,6 +2037,185 @@ p {
   bottom: -5px;
   position: absolute;
   left: 0;
+}
+
+.contacts_input::after {
+  position: absolute;
+  display: block;
+  margin: -8px 0 0;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  right: 23px;
+  background-size: contain !important;
+  content: "";
+}
+
+.contacts_list_item {
+  padding: 50px 30px 40px;
+  height: 100%;
+  text-align: center;
+  background: url(../img/advantage-bg.png) center top no-repeat #1d1d1d;
+}
+
+.contacts_list_item_title {
+  color: #fff;
+  display: block;
+  margin: 0 0 15px;
+  font: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+
+.contacts_list_item span,
+.contacts_list_item a {
+  color: #adadad;
+  font-size: 0.9em;
+}
+
+.contacts_icon {
+  margin: 0 auto 30px;
+  padding: 20px;
+  width: 70px;
+  background: #278ce1;
+  border-radius: 100%;
+}
+
+.contacts_icon img {
+  width: 100%;
+}
+
+.contacts_title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.contacts_input {
+  position: relative;
+}
+
+.contacts_input input {
+  margin: 0;
+  padding: 0 55px 0 25px;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  color: #adadad;
+  font: 14px "Montserrat", sans-serif;
+  font-weight: 400;
+  border: 1px solid #3e3e3e;
+  background: #313131;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.contacts_input textarea {
+  margin: 0;
+  margin-top: 30px;
+  padding: 20px 55px 20px 25px;
+  vertical-align: top;
+  width: 100%;
+  height: 140px;
+  color: #adadad;
+  font: 14px "Montserrat", sans-serif;
+  font-weight: 400;
+  border: 1px solid #3e3e3e;
+  background: #313131;
+  border-radius: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  resize: none;
+  overflow: auto;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.contacts .name::after {
+  background: url(../img/user-i-r.svg) center no-repeat;
+}
+
+.contacts .phone::after {
+  background: url(../img/phone-i-r.svg) center no-repeat;
+}
+
+.contacts .email::after {
+  background: url(../img/email-i-r.svg) center no-repeat;
+}
+
+.contacts .message::after {
+  background: url(../img/edit-i-r.svg) center no-repeat;
+  top: 55px;
+}
+
+.contacts p {
+  color: #adadad;
+  font-size: 0.9em;
+}
+
+.contacts p span {
+  color: #278ce1;
+}
+
+.contacts .checkbox {
+  color: #adadad;
+  font-size: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts .checkbox label a {
+  color: #fff;
+}
+
+.contacts .checkbox input {
+  position: relative;
+  margin: 0 15px 0 0;
+  display: block;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid #3e3e3e;
+  background: #313131;
+  border-radius: 0px;
+  outline: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.contacts .checkbox input::before {
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 7px;
+  width: 8px;
+  height: 14px;
+  border-style: solid;
+  border-color: #278ce1;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.contacts .checkbox input:checked:before {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1200px) {

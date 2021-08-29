@@ -392,7 +392,8 @@ p {
 #about_section,
 .mission,
 .projects,
-.portfolio_page {
+.portfolio_page,
+.contacts {
     position: relative;
     overflow: hidden;
     background: $bgColor;
@@ -1139,24 +1140,24 @@ p {
         color: #fff;
         margin-top: 20px;
     }
-    &_individual{
+    &_individual {
         color: #fff;
-        img{
+        img {
             height: 80vh;
             width: 100%;
             object-fit: cover;
             margin-bottom: 50px;
         }
-        h2{
+        h2 {
             font-weight: bold;
             margin: 30px 0;
         }
     }
-    &_date{
+    &_date {
         color: #fff;
         font-weight: 500;
-        font-size: .9em;
-        span{
+        font-size: 0.9em;
+        span {
             color: $mainColor;
             text-transform: uppercase;
         }
@@ -1812,6 +1813,180 @@ p {
     }
 }
 
+%input_icon {
+    position: absolute;
+    display: block;
+    margin: -8px 0 0;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    right: 23px;
+    background-size: contain !important;
+    content: "";
+}
+
+.contacts {
+    &_list_item {
+        padding: 50px 30px 40px;
+        height: 100%;
+        text-align: center;
+        background: url(../img/advantage-bg.png) center top no-repeat #1d1d1d;
+        &_title {
+            color: #fff;
+            display: block;
+            margin: 0 0 15px;
+            font: "Montserrat", sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 1em;
+        }
+        span,
+        a {
+            color: #adadad;
+            font-size: 0.9em;
+        }
+    }
+    &_icon {
+        margin: 0 auto 30px;
+        padding: 20px;
+        width: 70px;
+        background: $mainColor;
+        border-radius: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    &_title {
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    &_input {
+        position: relative;
+        &::after {
+            @extend %input_icon;
+        }
+        input {
+            margin: 0;
+            padding: 0 55px 0 25px;
+            vertical-align: top;
+            width: 100%;
+            height: 60px;
+            color: #adadad;
+            font: 14px "Montserrat", sans-serif;
+            font-weight: 400;
+            border: 1px solid #3e3e3e;
+            background: #313131;
+            box-shadow: none !important;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+        }
+        textarea {
+            margin: 0;
+            margin-top: 30px;
+            padding: 20px 55px 20px 25px;
+            vertical-align: top;
+            width: 100%;
+            height: 140px;
+            color: #adadad;
+            font: 14px "Montserrat", sans-serif;
+            font-weight: 400;
+            border: 1px solid #3e3e3e;
+            background: #313131;
+            border-radius: 0;
+            box-shadow: none !important;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            resize: none;
+            overflow: auto;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+        }
+    }
+    .name {
+        &::after {
+            background: url(../img/user-i-r.svg) center no-repeat;
+        }
+    }
+    .phone {
+        &::after {
+            background: url(../img/phone-i-r.svg) center no-repeat;
+        }
+    }
+    .email {
+        &::after {
+            background: url(../img/email-i-r.svg) center no-repeat;
+        }
+    }
+    .message {
+        &::after {
+            background: url(../img/edit-i-r.svg) center no-repeat;
+            top: 55px;
+        }
+    }
+    p {
+        color: #adadad;
+        font-size: 0.9em;
+        span {
+            color: $mainColor;
+        }
+    }
+    .checkbox {
+        color: #adadad;
+        font-size: 0.9em;
+        display: flex;
+        label a {
+            color: #fff;
+        }
+        input {
+            position: relative;
+            margin: 0 15px 0 0;
+            display: block;
+            width: 24px;
+            min-width: 24px;
+            height: 24px;
+            border: 1px solid #3e3e3e;
+            background: #313131;
+            border-radius: 0px;
+            outline: 0;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            &::before {
+                position: absolute;
+                display: block;
+                top: 2px;
+                left: 7px;
+                width: 8px;
+                height: 14px;
+                border-style: solid;
+                border-color: $mainColor;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                content: "";
+                opacity: 0;
+                -webkit-transition: opacity 0.3s linear;
+                -moz-transition: opacity 0.3s linear;
+                -o-transition: opacity 0.3s linear;
+                transition: opacity 0.3s linear;
+            }
+            &:checked:before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .navigation {
         padding: 20px 15px;
@@ -2098,7 +2273,7 @@ p {
 }
 
 @media only screen and (max-width: 576px) {
-    .news_item .active-btn{
+    .news_item .active-btn {
         margin-bottom: 30px;
     }
     .work_navi a {
