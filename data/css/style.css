@@ -455,23 +455,19 @@ p {
 .mission,
 .projects,
 .portfolio_page,
-.contacts {
+.contacts,
+.project_individual {
   position: relative;
   overflow: hidden;
   background: #2f2f2f;
   z-index: 9;
 }
 
-.about_col {
+.about_col, .project_individual .project_list {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 100px;
-  width: 100%;
 }
 
-.about_col::after {
+.about_col::after, .project_individual .project_list::after {
   position: absolute;
   display: block;
   width: 380px;
@@ -482,6 +478,15 @@ p {
   content: "";
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.about_col {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 100px;
+  width: 100%;
 }
 
 .about_col_image {
@@ -1804,6 +1809,63 @@ p {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.project_individual {
+  position: relative;
+  z-index: 99;
+}
+
+.project_individual .project_item {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  z-index: 99;
+}
+
+.project_individual .project_img {
+  width: 50%;
+  display: block;
+  border: 20px solid #353535;
+}
+
+.project_individual .project_img img {
+  width: 100%;
+}
+
+.project_triangle_before {
+  position: relative;
+}
+
+.project_triangle_before::before {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  top: -30px;
+  left: -30px;
+  border: 181px solid transparent;
+  border-left: 181px solid #278ce1;
+  border-top: 181px solid #278ce1;
+  content: "";
+}
+
+.project_triangle_after {
+  position: relative;
+}
+
+.project_triangle_after::after {
+  position: absolute;
+  display: block;
+  top: -30px;
+  right: -30px;
+  border: 181px solid transparent;
+  border-right: 181px solid #278ce1;
+  border-top: 181px solid #278ce1;
+  content: "";
+  z-index: -1;
 }
 
 .portfolio_page .portfolio_text_left {
