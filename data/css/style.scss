@@ -1496,10 +1496,12 @@ p {
         }
         img {
             width: 100%;
+            @extend %transition_style;
         }
     }
     &_img {
         position: relative;
+        overflow: hidden;
         &::after {
             position: absolute;
             bottom: 0;
@@ -2056,6 +2058,13 @@ p {
                 opacity: 1;
             }
         }
+    }
+}
+
+.partners{
+    background: $bgColor;
+    a:hover img{
+        transform: scale(1.1);
     }
 }
 
