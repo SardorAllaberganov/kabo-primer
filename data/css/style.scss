@@ -1992,6 +1992,19 @@ p {
             top: 55px;
         }
     }
+
+    .service_time {
+        &::after {
+            background: url(../img/time-i-r.svg) center no-repeat;
+        }
+    }
+
+    .service_type {
+        &::after {
+            background: url(../img/service-i-r.svg) center no-repeat;
+        }
+    }
+
     p {
         color: #adadad;
         font-size: 0.9em;

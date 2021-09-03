@@ -2220,6 +2220,14 @@ p {
   top: 55px;
 }
 
+.contacts .service_time::after {
+  background: url(../img/time-i-r.svg) center no-repeat;
+}
+
+.contacts .service_type::after {
+  background: url(../img/service-i-r.svg) center no-repeat;
+}
+
 .contacts p {
   color: #adadad;
   font-size: 0.9em;
