@@ -123,6 +123,16 @@ p {
     }
     .lang_dropdown {
         width: max-content;
+        button{
+            border: none;
+            outline: none;
+            background: none;
+            color: #999;
+            @extend %transition_style;
+            &:hover{
+                color: #fff;
+            }
+        }
     }
     .lang_link {
         display: flex;

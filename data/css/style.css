@@ -34,7 +34,7 @@ p {
   line-height: 150%;
 }
 
-.navigation, .navigation_items::before, .navigation_dropdown, .navigation_dropdown li a, .navigation .lang_link span, .showOverlay, .mobile_menu, .active-btn, .active-btn::before, .services_block_in a, .services_block_in a::before, .services_block_in a h4, .news_image img, .footer_links a, .social_icons li, .team_items img, .projects_img, .projects_img img, .projects_img::before, .work_navi a {
+.navigation, .navigation_items::before, .navigation_dropdown, .navigation_dropdown li a, .navigation .lang_dropdown button, .navigation .lang_link span, .showOverlay, .mobile_menu, .active-btn, .active-btn::before, .services_block_in a, .services_block_in a::before, .services_block_in a h4, .news_image img, .footer_links a, .social_icons li, .team_items img, .projects_img, .projects_img img, .projects_img::before, .work_navi a {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
@@ -140,6 +140,17 @@ p {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.navigation .lang_dropdown button {
+  border: none;
+  outline: none;
+  background: none;
+  color: #999;
+}
+
+.navigation .lang_dropdown button:hover {
+  color: #fff;
 }
 
 .navigation .lang_link {

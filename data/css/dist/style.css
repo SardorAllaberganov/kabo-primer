@@ -34,7 +34,7 @@ p {
   line-height: 150%;
 }
 
-.work_navi a, .projects_img::before, .projects_img img, .projects_img, .team_items img, .social_icons li, .footer_links a, .news_image img, .services_block_in a h4, .services_block_in a::before, .services_block_in a, .active-btn::before, .active-btn, .mobile_menu, .showOverlay, .navigation .lang_link span, .navigation_dropdown li a, .navigation_dropdown, .navigation_items::before, .navigation {
+.work_navi a, .projects_img::before, .projects_img img, .projects_img, .team_items img, .social_icons li, .footer_links a, .news_image img, .services_block_in a h4, .services_block_in a::before, .services_block_in a, .active-btn::before, .active-btn, .mobile_menu, .showOverlay, .navigation .lang_link span, .navigation .lang_dropdown button, .navigation_dropdown li a, .navigation_dropdown, .navigation_items::before, .navigation {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -116,6 +116,15 @@ p {
 }
 .navigation .lang_dropdown {
   width: max-content;
+}
+.navigation .lang_dropdown button {
+  border: none;
+  outline: none;
+  background: none;
+  color: #999;
+}
+.navigation .lang_dropdown button:hover {
+  color: #fff;
 }
 .navigation .lang_link {
   display: flex;
